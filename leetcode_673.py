@@ -16,8 +16,8 @@ class Solution:
                 if nums[i]>nums[j]:
                     if length[j]+1 >length[i]:
                         length[i]=length[j]+1 
-                        count[i]=0
-                    if length[j]+1 == length[i]:
+                        count[i]=count[j]
+                    elif length[j]+1 == length[i]:
                         count[i]+=count[j]
 
         maxi = max(length)
